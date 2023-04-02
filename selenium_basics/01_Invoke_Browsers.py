@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.service import Service
 # Chrome Driver
 # provide the chrome drive path located in your system
 
-service_obj = Service("")
+service_obj = Service("C:/Users/nitsachdeva/PycharmProjects/chrome-drivers/chromedriver.exe")
 driver = webdriver.Chrome(service=service_obj)
 
 # navigate to mentioned url
