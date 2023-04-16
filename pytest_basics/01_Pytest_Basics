@@ -1,0 +1,22 @@
+1. Your file should be starting with keyword test in pytest or end with keyword test for eg = filename = test_demo.py or demo1_test.py
+2. in pytest standards whatever code you write for a test, it should be in function
+3. pytest test method should be start with name test for eg = def test_functionName()
+4. To get pytest runner in pycharm -> click on edit configurations > click on + icon > under python test > select pytest > click ok. For running specific
+   file under pytest you can pass the pytest file name under same configurations.
+5. pytest won't having same test function names defined in a file.It will override the function
+6. Running pytest from terminal :
+    A. if you want to run all test under pytest folder, give command = py.test
+    B. To get more information or logs, give -v(verbose) on command = py.test -v
+    C. in pytest console logs won't be showing on output, if you want such give command = py.test -v -s
+    D. if you want to run specific test file, but before that you have to move to pytest directory = py.test test_demo2.py -v -s
+    E. If you want to run specific test function = py.test -k "function_Name" -v -s
+    F. If you want to run with specific tags = py.test -m "tag name" -v -s
+
+7. You can skip test cases by providing @pytest.mark.skip under test functions
+8. If you know there is bug in test or pending functionality and you want to avoid those test in report = @pytest.mark.xfail
+9. In python fixtures are just like the junit and testng frameworks test.before and test.after methods. In pytest for before method execution we define like below and for after test execution we have keyword
+   "yield" to perform post test execution operations.
+10. In every framework there will be some common fixture, so in pytest we can define such in conftest.py file
+11. Fixture can also used in providing the data for your tests,Also Once you define fixture scopes at class level, then the fixture will only run once before the class is initialized.
+12. To get HTML report first install = pip install pytest-html
+    then run your test with command = py.test --html=report.html
